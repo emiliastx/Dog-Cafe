@@ -13,11 +13,12 @@
 /* section 1 */
 
 body {
-  background-color: var(--pale-orange);
+  background-image: url("images/Background.png");
+  background-size: contain;
+  background-position-y: top;
 }
-
 .logo {
-  max-width: 400px;
+  max-width: 200px;
   display: block;
   margin: 0 auto;
   border-radius: 1000px;
@@ -70,6 +71,6 @@ h2 {
 
 @media only screen and (max-width: 767px) {
   .logo {
-    max-width: 275px;
+    max-width: 150px;
   }
 }
