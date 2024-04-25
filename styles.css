@@ -15,12 +15,20 @@
 body {
   background-color: var(--pale-orange);
 }
+
+.logo {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 1000px;
+}
+
 h1,
 h2 {
   text-align: center;
 }
 h1 {
-  margin-top: 100px;
+  margin-top: 10px;
   color: var(--redwood);
 }
 h2 {
@@ -58,4 +66,10 @@ h2 {
 .veggie {
   font-weight: normal;
   font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    max-width: 275px;
+  }
 }
