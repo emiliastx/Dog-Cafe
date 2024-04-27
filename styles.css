@@ -51,7 +51,7 @@ body {
   background-color: rgb(248, 209, 136);
 }
 .section-2 {
-  padding: 80px;
+  padding: 80px 80px 20px 80px;
 }
 
 .about-us {
@@ -73,10 +73,51 @@ body {
 }
 .about-row {
   display: flex;
-  align-items: center; /* Center vertically */
+  align-items: center;
+}
+
+/* special */
+
+.special-title {
+  font-family: "amatic sc", sans-serif;
+  font-size: 45px;
+  margin-top: 20px;
+}
+.special-container {
+  margin-top: 40px;
+}
+.special-row {
+  text-align: center;
+}
+.special-icon {
+  font-size: 30px;
+  color: rgb(250, 224, 167);
+  border: 1px solid rgb(250, 224, 167);
+  background-color: var(--hookers-green);
+  border-radius: 80px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.fa-cake-candles {
+  padding: 12px 14px 12px 14px;
+}
+h4 {
+  font-family: "lato", sans-serif;
+  font-size: 25px;
+  color: var(--redwood);
+}
+.special-desc {
+  font-family: "lato", sans-serif;
+  color: var(--redwood);
+}
+.stars {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--pale-orange);
 }
 
 /* menu */
+
 .menu {
   background-image: url("images/Background\ \(1\).png");
   background-size: contain;
