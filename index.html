@@ -20,42 +20,58 @@
       src="https://kit.fontawesome.com/80c405d093.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <section class="section-1">
-      <nav class="navbar">
+      <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
-          <a class="navbar-brand menu-nav" href="#menu-title">Menu</a>
-          <span class="ms-auto">
-            <a class="navbar-brand" href="#"
-              ><i class="contact-icon fa-solid fa-phone"></i
-            ></a>
-            <a class="navbar-brand" href="mailto:emilia@destcroix.com"
-              ><i class="contact-icon fa-solid fa-envelope"></i
-            ></a>
-          </span>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#about-us">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu-title">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#visit-us">Visit</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
       <img src="images/Linedog.png" alt="logo" class="logo" />
-      <h1>The Hungry Hound</h1>
-      <h2>Canine Cuisine</h2>
+      <h1 class="fade-in">The Hungry Hound</h1>
+      <h2 class="fade-in">Canine Cuisine</h2>
     </section>
 
     <section class="section-2">
       <div class="container">
         <div class="row about-row">
           <div class="col-md-8">
-            <h2 class="about-us">About Us</h2>
-            <p class="intro">
+            <h2 class="about-us fade-in" id="about-us">About Us</h2>
+            <p class="intro fade-in">
               Nestled in the heart of Marylebone, we offer a unique dining
               experience designed to delight both you and your furry friend. Our
               menu boasts a curated selection of gourmet dishes crafted from the
@@ -72,10 +88,10 @@
         </div>
       </div>
 
-      <h2 class="special-title">What makes us special</h2>
+      <h2 class="special-title fade-in">What makes us special</h2>
       <div class="container special-container">
         <div class="row special-row">
-          <div class="col-md-3">
+          <div class="col-md-3 fade-in">
             <i class="special-icon fa-solid fa-dog"></i>
             <h4>Exclusively for Dogs</h4>
             <div class="special-desc">
@@ -84,7 +100,7 @@
               owners.
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 fade-in">
             <i class="special-icon fa-solid fa-carrot"></i>
             <h4>Gourmet Canine Cuisine</h4>
             <div class="special-desc">
@@ -93,7 +109,7 @@
               nutritional needs.
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 fade-in">
             <i class="special-icon fa-solid fa-hand-holding-medical"></i>
             <h4>A Knowledgeable Team</h4>
             <div class="special-desc">
@@ -101,7 +117,7 @@
               safety and well-being of all guests.
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 fade-in">
             <i class="special-icon fa-solid fa-cake-candles"></i>
             <h4>Events and Functions</h4>
             <div class="special-desc">
@@ -320,5 +336,40 @@
         </div>
       </div>
     </section>
+
+    <section class="visit-section fade-in">
+      <h2 class="visit-title" id="visit-us">Visit Us</h2>
+      <div class="visit-info">
+        <div class="address">86 Bark Lane, Marylebone, London W0 0FF</div>
+        <div class="opening-times">9AM - 9PM</div>
+        <div class="opening-days">Tuesday - Sunday</div>
+        <div>Closed Mondays</div>
+      </div>
+    </section>
+
+    <script>
+      $(document).ready(function () {
+        // Function to fade in elements as they scroll into view
+        function fadeInOnScroll() {
+          $(".fade-in").each(function () {
+            var top_of_element = $(this).offset().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            // Check if the top of the element hits the bottom of the screen
+            if (top_of_element < bottom_of_window) {
+              $(this).animate({ opacity: "1" }, 400);
+            }
+          });
+        }
+
+        // Fade in elements initially
+        fadeInOnScroll();
+
+        // Fade in elements as you scroll
+        $(window).scroll(function () {
+          fadeInOnScroll();
+        });
+      });
+    </script>
   </body>
 </html>

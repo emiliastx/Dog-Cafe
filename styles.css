@@ -4,14 +4,23 @@
   --redwood: #5a0002;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
 /* top navbar */
 
 .menu-nav {
   color: var(--redwood);
   font-family: "Lato", sans-serif;
 }
-.contact-icon {
+.nav-link {
   color: var(--redwood);
+  font-family: "lato", sans-serif;
+}
+.nav-link:hover {
+  border-bottom: 2px solid var(--hookers-green);
 }
 
 /* section 1 */
@@ -127,7 +136,7 @@ h4 {
 
 .menu-container {
   margin-top: 50px;
-  background-color: rgb(243, 253, 249);
+  background-color: rgb(253, 251, 243);
   border: 2px var(--hookers-green) dotted;
   padding: 50px;
   margin-bottom: 50px;
@@ -168,6 +177,30 @@ h4 {
   font-size: 14px;
 }
 
+/* visit us */
+
+.visit-title {
+  font-family: "amatic sc", sans-serif;
+  font-size: 60px;
+}
+.visit-info {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-size: 20px;
+  color: var(--redwood);
+}
+.address {
+  text-decoration: underline;
+}
+.opening-times {
+  margin-top: 20px;
+}
+.opening-days {
+  margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 767px) {
   .logo {
     max-width: 160px;
@@ -183,6 +216,15 @@ h4 {
   }
   .about-img {
     max-width: 280px;
+  }
+
+  /* special */
+
+  .special-title {
+    margin-top: 40px;
+  }
+  .special-desc {
+    margin-bottom: 30px;
   }
 
   /* menu */
